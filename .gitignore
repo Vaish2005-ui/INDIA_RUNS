@@ -1,0 +1,7 @@
+data/
+processed/
+embeddings/
+
+__pycache__/
+*.pyc
+*.npy
