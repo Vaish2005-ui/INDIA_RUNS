@@ -1,0 +1,59 @@
+import { useNavigate } from "react-router-dom";
+
+export default function CompanySetup() {
+  const navigate = useNavigate();
+
+  const handleSubmit = (
+    e: React.FormEvent
+  ) => {
+    e.preventDefault();
+
+    navigate("/recruiter/dashboard");
+  };
+
+  return (
+    <div className="page-container">
+
+      <h1>Company Setup</h1>
+
+      <form
+        className="form-card"
+        onSubmit={handleSubmit}
+      >
+
+        <input
+          placeholder="Company Name"
+          required
+        />
+
+        <input
+          placeholder="Industry"
+          required
+        />
+
+        <input
+          placeholder="Company Website"
+        />
+
+        <input
+          placeholder="Company Size"
+        />
+
+        <input
+          placeholder="Location"
+        />
+
+        <textarea
+          rows={6}
+          placeholder="Company Description"
+        />
+
+        <button type="submit">
+          Save Company Profile
+        </button>
+
+      </form>
+
+    </div>
+  );
+}
